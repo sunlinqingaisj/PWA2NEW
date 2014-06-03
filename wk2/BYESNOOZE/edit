@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+		<head>
+		<title>Bye Snooze</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+	</head>
+	<body>
+<!-- ---------------------------- head ----------------------------------------------------------------------------------------------- -->
+
+	<div>
+		<div id="header">
+			<div id="loginForm">
+			<p id="welcome">Welcome User</p>
+			<a id="myAccount">My Account</a>
+			<a href="index.html"><button class="myButton">Log Out</button></a>
+			</div>
+		</div>
+	<div class="titleName">
+	<h1>Add Project</h1>
+	</div>
+	
+	<div class="addProject">
+		<div class="cOne">
+			<div class="fieldOne">
+			<p class="editText">Project Name:</p>
+			<input type="text" class="editInput">
+			</div>
+
+			<div class="fieldTwo">
+			<p class="editText">Description:</p>
+			<input type="text" class="editInputDes">
+			</div>
+
+			<div class="fieldThree">
+			<p class="editText">Due Date:</p>
+			<input type="date" class="editInput">
+			</div>
+
+			<div class="fieldFour">
+			<p class="editText">Status:</p>
+			<div id="statusImg">
+					<img src="img/complete.png" class="active">
+					<img src="img/active.png" class="active">
+					<img src="img/urgent.png" class="active">
+					<img src="img/passDue.png" class="active">
+				</div>
+			</div>
+
+			<div  class="save">
+			<button class="myButton" class="clearFix"><a>Save</a></button>
+			</div>
+		</div>
+	</div>
+
+	<div id="addTaskName">
+	<h1>Add Task</h1>
+	</div>
+
+	<div class="addProject">
+		<div class="cOne">
+			<div class="fieldOne">
+			<p class="editText">Task Name:</p>
+			<input type="text" class="editInput">
+			</div>
+
+			<div class="fieldTwo">
+			<p class="editText">Description:</p>
+			<input type="text" class="editInputDes">
+			</div>
+
+			<div class="fieldThree">
+			<p class="editText">Due Date:</p>
+			<input type="date" class="editInput">
+			</div>
+
+			<div class="fieldFour" class="clearFix">
+			<p class="editText">Status:</p>
+				<div id="statusImg">
+					<img src="img/complete.png" class="active">
+					<img src="img/active.png" class="active">
+					<img src="img/urgent.png" class="active">
+					<img src="img/passDue.png" class="active">
+				</div>
+			</div>
+
+			<div  class="save">
+			<button class="myButton" class="clearFix"><a>Save</a></button>
+			</div>
+		</div>
+	</div>
+	
+	</div>
+
+     <footer class="clearFix">
+         <div class="copyright">
+             <p>&copy; 2013 Bye Snooze Time Managnment. All rights reserved.</p>
+         </div>
+     </footer>
+	
+	</body>
+</html>
