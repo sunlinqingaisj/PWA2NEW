@@ -1,0 +1,159 @@
+/*---------------------------header---------------------------*/
+html, body, div, span, applet, object, iframe,
+h2, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+ header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+
+#header{
+	/*margin-top: -10px;*/
+	width: 100%;
+	height: 60px;
+	background: #ffffff;
+}
+
+body{
+	background: url(../img/bgcork.png) no-repeat center;
+	overflow-y: hidden;
+}
+
+h3,ul li{
+	/*color: #ffffff;*/
+}
+
+h1{
+	color: #83AF9B;
+	font-size: 42px;
+	/*-webkit-text-stroke: 2px black;*/
+}
+
+#features ul li{
+	font-size: 20px;
+	margin-bottom: 20px;
+	color: #83AF9B;
+}
+
+#signIn{
+	width: 500px;
+	float: right;
+	display: none;
+}
+
+#landingImg{
+	z-index: -50;
+	position: absolute;
+	margin-left: -480px;
+	margin-top: -350px;
+	min-width: 80%;
+	min-height: 80%;
+	/*overflow-y: hidden;*/
+
+}
+
+#login{
+	/*width: 70px;
+	height: 40px;*/
+	float: right;
+	margin: 15px 30px 10px 10px;
+}
+
+#signUpColumn{
+	width: 500px;
+	height: 50px;
+	/*overflow: hidden;*/
+	float: right;
+	display: none;
+}
+
+#featuresColumn{
+	width: 500px;
+	/*height: px;*/
+	/*overflow: hidden;*/
+	float: right;
+	margin-top: 80px;
+}
+
+#bottom{
+	width: 100%;
+	height: 620px;
+}
+
+footer{
+	width: 100%;
+	height: 60px;
+	background: #ffffff;
+}
+
+.copyright ul li{
+	color: #FE4365;
+	width: 100px;
+	margin-right: 70px;
+	margin-top: 20px;
+	float: left;
+	list-style: none;
+}
+
+.copyright{
+	width: 600px;
+	margin-left: 35%;
+}
+
+/*----------------------------Button---------------------------------*/
+.myButton {
+	-moz-box-shadow:inset 0px 1px 0px 0px #e6dbd4;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #e6dbd4;
+	box-shadow:inset 0px 1px 0px 0px #e6dbd4;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #fc9d9a), color-stop(1, #fe4365));
+	background:-moz-linear-gradient(top, #fc9d9a 5%, #fe4365 100%);
+	background:-webkit-linear-gradient(top, #fc9d9a 5%, #fe4365 100%);
+	background:-o-linear-gradient(top, #fc9d9a 5%, #fe4365 100%);
+	background:-ms-linear-gradient(top, #fc9d9a 5%, #fe4365 100%);
+	background:linear-gradient(to bottom, #fc9d9a 5%, #fe4365 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fc9d9a', endColorstr='#fe4365',GradientType=0);
+	background-color:#fc9d9a;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #fc9d9a;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #798a77;
+}
+.myButton:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #fe4365), color-stop(1, #fc9d9a));
+	background:-moz-linear-gradient(top, #fe4365 5%, #fc9d9a 100%);
+	background:-webkit-linear-gradient(top, #fe4365 5%, #fc9d9a 100%);
+	background:-o-linear-gradient(top, #fe4365 5%, #fc9d9a 100%);
+	background:-ms-linear-gradient(top, #fe4365 5%, #fc9d9a 100%);
+	background:linear-gradient(to bottom, #fe4365 5%, #fc9d9a 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fe4365', endColorstr='#fc9d9a',GradientType=0);
+	background-color:#fe4365;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+
