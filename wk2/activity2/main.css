@@ -1,0 +1,37 @@
+<title>Accordion</title>
+<style type='text/css'>
+
+.accordion{
+	margin: 50px;
+}
+dt, dd{
+	padding:10px;
+	border:1px solid black;
+	border-bottom: 1px solid black;
+}
+dt, dd:last{
+	border-bottom: 1px solid black;
+}
+a{
+	display:black;
+	color:black;
+	font-weight:bold;
+}
+dd{
+	border-top: 0;
+	font-size: 12px;
+}
+
+/*----------------tool tip-----------------------*/
+.tooptip{
+	display:none;
+	position: absolute;;
+	border-bottom: 1px, solid #333;
+	background-color: #000000;
+	border-radius: 5px;
+	padding: 7px;
+	color: #fff;
+	font-size: 12px Arial;
+}
+
+<input name="signup" type="text" id="user" class="masterTooltip" title="Please enter a user name">
