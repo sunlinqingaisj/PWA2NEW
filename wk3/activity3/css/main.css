@@ -1,0 +1,26 @@
+#photo{
+	width: 30%;
+	height: 30%;
+	/*position: absolute;*/
+}
+
+div #content{
+	width: 425px;
+	height: 89px;
+	display: none;
+	position: relative;
+	color: #ffffff;
+	padding-left: 2px;
+}
+
+#icon{
+	left: -280px;
+	position: relative;
+	top:-110px;
+	/*z-index: 1;*/
+
+}
+#blah{
+	position: relative;
+}
+
