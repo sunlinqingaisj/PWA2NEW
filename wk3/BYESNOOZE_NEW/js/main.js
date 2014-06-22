@@ -1,21 +1,3 @@
-// $('.projectsbtn').on('click', function(e){
-// 	e.preventDefault();
-// 	window.location.assign("projects.html")
-// })
-
-// $('#tabs p'),hide().eq(0).show();
-// $('#tabs p:not(:first)').hide();
-
-// $('#tabs-nav li').click(function(e){
-// 	e.preventDefault();
-// 	$('#tabs p').hide();
-
-// 	$('#tabs-nav.current').removeClass('current');
-// 		$(this).addClass('current');
-// 		var clicked = $(this).find('a:first').attr('href');
-
-// 		$('#tabs' + clicked).fadeIn('fast');
-// 	}).eq(0).addClass('current');
 
 $(function(){
 	$('#supBtn').on('click', function(event){
@@ -62,29 +44,6 @@ $(function(){
 
 	});
 
-	// Login php--------------------------------------------
-	// $("#sinBtn").click(function(){
-	// 	var user = $("#user").val();
-	// 	var pass = $("#pass").val();
-	// 	console.log("ahhhh~its working")
-	// 	$.ajax({
-	// 	url:"../xhr/login.php",
-	// 	type:"post",
-	// 	dataType:"json",
-	// 	data:{
-	// 		username: user,
-	// 		password: pass
-	// 	},
-	// 	success:function(response){
-	// 			if(response.error){
-	// 				alert(response.error)
-	// 			}else{
-	// 				window.location.assign("dash.html")
-	// 			};
-	// 		}
-	// 	});
-	// })
-
 	$("#sinBtn").click(function(){
 			console.log('blah');
 			var username = $('#usernameInput').val();
@@ -113,24 +72,15 @@ $(function(){
 				}
 			});
 
-			var checkLogin = function(){
-			$.ajax({
-				url:'xhr/check_login.php',
-				type: 'get',
-				dataType: 'json',
-				success: function(r){
-					if(r.user){
-						console.log('logged in');
-						username = r.user.user_n;
-					}else{
-						console.log('try again');
-					}
-				}
-			});
-		};
+			// check login
+			$.getJSON("xhr/check_login.php", function(data){
+				$.each(data, function(key, value){
+					$(".welcome").html('value.username');
+				})
+			})
 		});
 
-	// log out!!!!!!!!!!!!!!!!!!!!!
+	// Register!!!!!!!!!!!!!!!!!!!!!
 	$("#submit").click(function(e){
 		e.preventDefault();
 		var user = $('#username').val();
@@ -156,8 +106,16 @@ $(function(){
 					}
 				}
 			});
+	});
+// log out!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+$('#logout').click(function(e){
+	console.log("test")
+	e.preventDefault();
+	$.get('xhr/logout.php', function(){
+		window.location.assign('index.html')
 	})
-
+	console.log("lougout")
+})
 
 
 // accordian for breif description
@@ -170,22 +128,6 @@ $(function(){
 			var project = $(this).find('a').attr('data');
 
 			$('#'+project).show();
-
-			// e.preventDefault();
-			// $(".brief div").hide();
-			// $(".active").removeClass('active');
-			// $(this).addClass("active")
-			// var $clicked = $(this).find("a:first").attr("href")
-			// $(".brief" + $clicked).fadeIn()
-			// console.log($clicked);
-			// $content.hide();
-
-			// $active = $(this);
-			// console.log("blah")
-			// $content = $(this.hash);
-
-			// $active.addClass('active');
-			// $content.show();
 
 		}).eq(0).addClass("active");
 
@@ -208,14 +150,97 @@ $(function(){
 		.fadeOut();
 
 	});
+
+	// add new project
+	$("#addProject").on('click',function(e){
+		console.log("blah")
+		e.preventDefault();
+		var proName = $("#projectName").val();
+		var proDes = $("#projectDes").val();
+		var proDue = $("#projectDue").val();
+		var status = $('input[name="status"]:checked').prop("id");
+
+		$.ajax({
+			url: 'xhr/new_project.php',
+			type: "post",
+			dataType: "json",
+			data:{
+				projectName: proName,
+				projectDescription: proDes,
+				dueDate: proDue,
+				status: status
+			},
+			success:function(response){
+				if(response.error){
+					alert("Testing for success. Project creation failed");
+					console.log("ahhhhh~you are wrong");
+				}else{
+					alert("Project added successfully");
+				}
+			}
+		});
+	});
+
+	// display new project
+	var projects = function(){
+
+		$.ajax({
+			url		: 'xhr/get_projects.php',
+			type 	: 'get',
+			dataType: 'json',
+			success : function(response){
+				if(response.error){
+					console.log(response.error);
+
+				} else {
+					
+					for(var i = 0, j = response.projects.length; i < j; i++){
+						var result = response.projects[i];
+
+						$('.projects').append(
+							'<div style = "border: 1px solid black">' +
+							"<input class = 'projectid' type = 'hidden' value = '" + result.id + "'>" + 
+							// 'Project ID: ' + result.id + '<br>' +
+							'Project Name: ' + result.projectName + '<br>' +
+							'Project Description: ' + result.projectDescription + '<br>' +
+							'<button class = "deletebtn">Delete</button>' +
+							//'<button class = "editbtn">Edit</button>' +
+							'</div><br>'
+						);
+					};
+					$('.delete').on('click', function(e){
+						var pid = $(this).parent().find(".projectid").val();
+						console.log('test delete');
+						$.ajax({
+							url 	: 'xhr/delete_project.php',
+							data 	: { projectID: pid },
+							type 	: 'post',
+							dataType: 'json',
+							success : function(response){
+								console.log("Testing for success.");
+
+								if(response.error){
+									alert(response.error);
+
+								} else {
+									console.log(result.id);
+									window.location.assign('dash.html');
+
+								};
+							}
+						});
+					}); /* End Delete */
+				} /* End Else */
+			} /* End Success */
+		}) /* End Ajax Call */
+	};
+	projects();
+		
+
+
 });
 
-// check login
-// $.getJSON("xhr/check_login.php", function(data){
-// 	$.each(data, function(key, value){
-// 		$(".userid").html("welcome user:" value.username);
-// 	})
-// })
+
 
 
 

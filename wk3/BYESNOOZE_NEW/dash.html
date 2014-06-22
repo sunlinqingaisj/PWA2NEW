@@ -11,21 +11,28 @@
 	<div>
 		<div id="header">
 			<img class="headLogo" src="img/headLogo.svg">
-			<div id="welcome">Welcome User</div>
-			<a href="" class="CtaButton" id="logout">Logout</a>
-			<div>fpdafdafdafndnoafjeiwaofdsafndsafkdnsjafndsafjdnsafjdksanfjdskafndjsanfjdsanfjdksnfajkdnskafndjskanfdjska</div>
+			<!-- <ul id="trouble"> -->
+				
+				<li id="troubleBtn"><a href="" class="CtaButton" id="logout">Logout</a></li>
+				<li id="welcome">Welcome User</li>
+			<!-- </ul> -->
+			<!-- <div >Welcome User</div> -->
+			
 		</div>
 		</div>
 	<div class='wrapper'>
 		<div class="top">
-			<h2>Dashboard</h2>
-			<!-- <h3>Add</h3> -->
-			<a  id="plus"><img src="img/plus.svg" alt=""></a>
+			<h2 id="dash">Dashboard</h2>
+			<li id="plus"><img src="img/plus.svg" alt=""></li>
 		</div>
 
 		<div class="left-column">
 			<div class="calender">
 				<div class="calender"></div>
+
+			<div id="projects">
+				
+			</div>
 			</div>
 					<ul class="tabs">
 						<li><a data="Project-1" >
@@ -57,6 +64,7 @@
 								</div>
 								</div>
 						</a></li>
+						<div class="projects"></div>
 					</ul>
 		</div>
 				
@@ -86,16 +94,16 @@
 		<h2 id="add-project">Add Project</h2>
 		<a href="#" class="close">X</a>
 		<form action="">
-			<input class="reg" type="text" name="New Project Name" value="project name" placeholder="New Project Name" title="please create your new project name" class="masterTooltip"></br>
-			<input class="reg" type="text" name="project description" placeholder-"Your brief description here please" value="project description" title="Create your brief desctiption" class="masterTooltip"></br>
-			<input class="reg" type="date" name="calender" value="Calender" title="Selete a due date" class="masterTooltip">
+			<input class="reg" type="text" name="New Project Name" value="project name" placeholder="New Project Name" title="please create your new project name" class="masterTooltip" id="projectName"></br>
+			<input class="reg" type="text" name="project description" placeholder="Your brief description here please" value="project description" title="Create your brief desctiption" class="masterTooltip" id="projectDes"></br>
+			<input class="reg" type="date" name="calender" value="Calender" title="Selete a due date" placeholder="Choose a due date" class="masterTooltip" id="projectDue">
 		</form>
-		<h3>Select a due date</h3>
+		<h3>Select a status</h3>
 		<a href="#"><img src="img/active.png" alt=""></a>
 		<a href="#"><img src="img/complete.png" alt=""></a>
 		<a href="##"><img src="img/urgent.png" alt=""></a>
 		<a href=""><img src="img/passDue.png" alt=""></a>
-		<a href="" id="submit">Submit</a>
+		<a href="" id="addProject">Submit</a>
 		</div>
 	</div>
 	
@@ -132,6 +140,7 @@
      </footer>
  -->
 	<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
 	</body>
 </html>
