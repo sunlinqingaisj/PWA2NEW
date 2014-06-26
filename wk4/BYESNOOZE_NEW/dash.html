@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+		<head>
+		<title>Bye Snooze</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<link rel="stylesheet" type="text/css" href="css/flipclock.css">
+	</head>
+	<body class="bg-color">
+<!-- ---------------------------- head ----------------------------------------------------------------------------------------------- -->
+
+	<div>
+		<div id="header">
+			<img class="headLogo" src="img/headLogo.svg">
+			<!-- <ul id="trouble"> -->
+				
+				<div id="troubleBtn"><li>Log Out</li></div>
+				<li id="welcome">Welcome User</li>
+			<!-- </ul> -->
+			<!-- <div >Welcome User</div> -->
+			
+		</div>
+		</div>
+	<div class='wrapper'>
+		<div class="top">
+			<h2 id="dash">Dashboard</h2>
+			<img id="plus" src="img/plus.svg" alt=""></li>
+		</div>
+		<div class="clock" style="margin:2em;"></div>
+		<div class="left-column">
+			<!-- <div class="calender">
+				<div class="clock" style="margin:2em;"></div>
+
+			<div id="projects">
+				
+			</div>
+			</div> -->
+					<ul class="tabs" id="sortable">
+						<!-- <li><a data="Project-1" >
+							<div class="project-list">
+								<div class="project">
+								<img class="status" src="img/active.png" /cf>
+								<p class="pName" class="projectName">Project Name</p>
+								<p class="projectDue">Due Date:</p>
+								<a><img  class="delete" src="img/delete.png" /cf></a>
+								</div>
+							</div>
+						</a></li>
+						
+						<li><a data="Project-2">
+							<div class="project-list">
+								<div class="project">
+								<img class="status" src="img/complete.png" /cf>
+								<p class="pName" class="projectName">Project Name</p>
+								<p class="projectDue">Due Date:</p>
+								<a><img  class="delete" src="img/delete.png" /cf></a>
+								</div>
+								</div>
+						</a></li> -->
+
+						<!-- <li><a data="Project-3">
+							<div class="project-list">
+								<div class="project">
+								<img class="status" src="img/urgent.png" /cf>
+								<p class="pName" class="projectName">Project Name</p>
+								<p class="projectDue">Due Date:</p>
+								<a><img  class="delete" src="img/delete.png" /cf></a>
+								</div>
+								</div>
+						</a></li> -->
+					</ul>
+		</div>
+				
+
+			<div class="brief">
+				<h3>Brief Description</h3>
+				<div class="projDesc">
+				</div>
+				<div id="Project-1" class="des">
+					<p>1 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+				</div>
+				<div id="Project-2" class="des">
+					<p>2 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+					1 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+					</p>
+				</div>
+				<div id="Project-3" class="des">
+					<p>3 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Blahhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh.</p>
+				</div>
+			</div>
+		
+		
+		
+	</div>
+
+	<div class="overlay">
+		<div id="add-modal">
+		<h2 id="add-project">Add Project</h2>
+		<a href="#" class="close">X</a>
+		<form action="">
+			<input class="reg" type="text" name="New Project Name" placeholder="New Project Name" title="please create your new project name" class="masterTooltip" id="projectName"></br>
+			<input class="reg" type="text" name="project description" placeholder="Your brief description here please" title="Create your brief desctiption" class="masterTooltip" id="projectDes"></br>
+			<input type="text" id="datepicker" class="reg" placeholder="choose a due date">
+		</form>
+		<h3>Select a status</h3>
+		<label class="myStatus">
+		<input type="radio" name="status" id="active"><img src="img/active.png" alt="">
+		</lable>
+
+		<label class="myStatus">
+		<input type="radio" name="status" id="complete"><img src="img/complete.png" alt="">
+		</lable>
+
+		<label class="myStatus">
+		<input type="radio" name="status" id="urgent"><img src="img/urgent.png" alt="">
+		</lable>
+
+		<label class="myStatus">
+		<input type="radio" name="status" id="late"><img src="img/passDue.png" alt="">
+		</lable>
+
+		<a href="" id="addProject">Submit</a>
+		</div>
+	</div>
+	
+
+	<!-- <div>
+		<ul id="tabs-nav">
+				<li><a href="#projects"><img src="" alt=""></a></li>
+				<li><a href="#projects"><img src="" alt=""></a></li>
+				<li><a href="#projects"><img src="" alt=""></a></li>
+			</ul>
+			<div id='tabs'>
+				<p  id="projects">
+					fdjaifodapfm udfifjdskafjdsaifd fjdiao adfwre dsafuidsahfd af dsayuiew afdyae  yfda fe
+				</p>
+				<button class="projectsbtn">Projects</button>
+
+				<p  id="projects">
+					fdjaifodapfm udfifjdskafjdsaifd fjdiao adfwre dsafuidsahfd af dsayuiew afdyae  yfda fe
+				</p>
+				<button class="projectsbtn">Projects</button>
+
+				<p  id="projects">
+					fdjaifodapfm udfifjdskafjdsaifd fjdiao adfwre dsafuidsahfd af dsayuiew afdyae  yfda fe
+				</p>
+				<button class="projectsbtn">Projects</button>
+			</div>
+		
+	</div>	 -->
+
+    <!--  <footer class="clearFix">
+         <div class="copyright">
+             <p>&copy; 2013 Bye Snooze Time Managnment. All rights reserved.</p>
+         </div>
+     </footer>
+ -->
+	<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui-1.10.4.custom.js"></script>
+	<script type="text/javascript" src="js/flipclock.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+	</body>
+</html>
